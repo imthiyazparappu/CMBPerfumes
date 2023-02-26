@@ -1,0 +1,44 @@
+<header class="w-100">
+    <div class="fluid-container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning w-100">
+        <a class="navbar-brand" href="/">CM BRAND PERFUMES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                {{#if user}}
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Orders <span class="sr-only">(current)</span></a>
+                </li>
+                {{/if}}
+                <li class="nav-item active">
+                    <a class="nav-link" href="/cart">Cart <span class="badge badge-success" id="cart-count">{{cartCount}}</span> <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{#if user}}
+                        {{user.name}}
+                        {{else}}
+                        Create account
+                    {{/if}}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {{#if user}}
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                    {{else}}
+                    <a class="dropdown-item" href="/login">Login</a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </nav>
+    </div>
+</header>

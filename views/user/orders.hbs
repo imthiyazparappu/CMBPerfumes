@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+    <div class="col-sm-12 col-md-12">
+        <div style="overflow-x:auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Payment Method</th>
+                    <th scope="col">price</th>
+                    <th scope="col">Order Status</th>
+                </tr>
+            </thead>
+            {{#each orders}}
+            <tr>
+                <td>{{this.date}}</td>
+                <td>{{this.deliveryDetails.address}}</td>
+                <td>{{this.deliveryDetails.number}}</td>
+                <td class="text-center">{{this.paymentMethod}}</td>
+                <td>{{this.totalAmount}}</td>
+                <td class="text-center">{{this.status}}</td>
+                <td><a href="/view-orders/{{this._id}}" id="view-products" class=" btn btn-primary"> View Products</a></td>
+            </tr>
+            {{/each}}
+        </table>
+        </div>
+    </div>
+    </div>
+</section>

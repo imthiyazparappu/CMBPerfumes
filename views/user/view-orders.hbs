@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+        <div style="overflow-x:auto;">
+            <div class="col-md-3">
+                <div class="card" style="width: 16rem;height:30rem; ">
+                    {{#each products}}
+                    <img class="card-img-top mx-auto" src="/product-images/{{this.product._id}}.jpg" alt="Card image cap" style="height: 19rem; width:14rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.product.name}}</h5>
+                        <p class="card-text">Quantity : {{this.quantity}}</p>
+                        <p class="card-text">Price : {{this.product.price}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
