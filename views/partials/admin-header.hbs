@@ -12,24 +12,24 @@
                     <a class="nav-link" href="#">Poducts <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">All Poducts <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/admin/all-users">All Users <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">orders <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/admin/orders">orders <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{#if user}}
-                    {{user.name}}
+                    {{#if admin}}
+                    {{admin.name}}
                     {{else}}
                     Create account
                     {{/if}}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {{#if user}}
-                    <a class="dropdown-item" href="/logout">Logout</a>
+                    {{#if admin}}
+                    <a class="dropdown-item" href="/admin/logout">Logout</a>
                     {{else}}
                     <a class="dropdown-item" href="/admin/login">Login</a>
                     {{/if}}

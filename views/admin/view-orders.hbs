@@ -1,0 +1,17 @@
+<section>
+    <div class="container">
+        <div style="overflow-x:auto;">
+            <div class="col-md-3">
+                <div class="card" style="width: 16rem;height:30rem; ">
+                    {{#each orderItems}}
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.product.name}}</h5>
+                        <p class="card-text">Quantity : {{this.quantity}}</p>
+                        <p class="card-text">Price : {{this.product.price}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

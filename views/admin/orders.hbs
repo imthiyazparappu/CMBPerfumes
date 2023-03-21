@@ -1,0 +1,23 @@
+<section>
+    <div class="container">
+        <div style="overflow-x:auto;">
+            <div class="col-md-3">
+                <div class="card" style="width: 16rem;height:18rem; ">
+                    {{#each orders}}
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.deliveryDetails.name}}</h5>
+                        <h5 class="card-text">Address : {{this.deliveryDetails.address}} {{this.deliveryDetails.number}}
+                        </h5>
+                        <p class="card-text">Payement Method : {{this.paymentMethod}}</p>
+                        <p class="card-text">Order status : {{this.status}}</p>
+                        <p class="card-text">Total Amount : {{this.totalAmount}}</p>
+                        <td><a href="/admin/view-orders/{{this._id}}" id="view-products" class=" btn btn-primary"> View
+                                products</a></td>
+
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

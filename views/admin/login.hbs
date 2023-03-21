@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-md-6">
         <h3 class="text-center mt-4">Admin Login</h3>
-        <form action="/login" method="post" class="m-5">
+        <form action="/admin/login" method="post" class="m-5">
         {{#if loginErr}}
         <p class="inavlid text-danger">Inavlid data entered</p>
         {{/if}}
@@ -14,7 +14,7 @@
                 <input type="password" class="form-control" placeholder="Enter password" name="Password" id="pwd">
             </div>
             <div class="form-group float-right">
-                <a class="ml-5" href="admin/signup">Create a new account?</a>
+                <a class="ml-5" href="/admin/signup">Create a new account?</a>
             </div>
             </label>
     </div>

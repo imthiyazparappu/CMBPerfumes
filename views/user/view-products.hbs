@@ -1,16 +1,16 @@
 {{!-- products --}}
 <section>
     <div class="container">
-        <div class="row m-3">
+        <div class="row m-2">
             {{#each products}}
             <div class="col-md-3">
-                <div class="card" style="width: 16rem;height:30rem; ">
+                <div class="card" style="width: 16rem;height:34rem; ">
                     <img class="card-img-top mx-auto" src="/product-images/{{this._id}}.jpg" alt="Card image cap" style="height: 19rem; width:14rem;">
                     <div class="card-body">
                         <h5 class="card-title">{{this.name}}</h5>
                         <p class="card-text font-weight-bold">Rs.{{this.price}}</p>
                         <p class="card-text">{{this.descreption}}</p>
-                        <button class="btn btn-primary" onclick="addToCart('{{this._id}}')">Add to Cart</button>
+                        <button class="btn btn-warning" onclick="addToCart('{{this._id}}')">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -18,3 +18,20 @@
         </div>
     </div>
 </section>
+
+<style>
+    section {
+        font-family: 'Poppins', sans-serif;
+        }
+
+    .card{
+        border: 0.3rem;
+        border-width: 0.3rem;
+        border-style: solid;
+        border-color: #f2c10f;
+        margin: 1rem;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+</style>
